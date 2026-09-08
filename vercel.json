@@ -1,19 +1,22 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/download.js",
-      "use": "@vercel/node"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/download.js": {
+      "maxDuration": 300
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/api/download",
-      "dest": "/api/download.js"
+      "source": "/api/download",
+      "destination": "/api/download"
     },
     {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
     }
   ]
 }
