@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Simple YouTube Downloader">
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="logo">YouTubeDownloader</div>
+      <h1>動画をかんたんに保存</h1>
+      <p class="sub">リンクを入力して、MP4またはMP3を選択してください。</p>
+
+      <form id="downloadForm">
+        <label for="url">YouTube URL</label>
+        <div class="input-row">
+          <input id="url" type="url" placeholder="https://www.youtube.com/watch?v=..." required>
+          <button id="pasteBtn" class="secondary" type="button">貼り付け</button>
+        </div>
+
+        <div class="formats">
+          <button class="format active" type="button" data-format="mp4">MP4</button>
+          <button class="format" type="button" data-format="mp3">MP3</button>
+        </div>
+
+        <label for="quality">品質</label>
+        <select id="quality">
+          <option value="best">最高品質</option>
+          <option value="1080">1080p</option>
+          <option value="720">720p</option>
+          <option value="480">480p</option>
+          <option value="360">360p</option>
+        </select>
+
+        <button class="download" type="submit">ダウンロード</button>
+      </form>
+
+      <div id="status" class="status hidden"></div>
+    </section>
+
+    <footer>Static frontend + Vercel serverless API scaffold</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
