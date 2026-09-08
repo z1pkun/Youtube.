@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/download.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/download",
+      "dest": "/api/download.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}

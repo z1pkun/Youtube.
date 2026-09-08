@@ -1,0 +1,10 @@
+{
+  "name": "youtube-downloader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple YouTube Downloader frontend with a Vercel API integration scaffold",
+  "dependencies": {
+    "@vercel/node": "^5.0.0"
+  },
+  "devDependencies": {}
+}
